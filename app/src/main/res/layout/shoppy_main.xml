@@ -6,14 +6,122 @@
     android:layout_height="match_parent"
     tools:context="com.example.rod.shoppy.ShoppyMain">
 
-    <TextView
-        android:id="@+id/sample_text"
+    <EditText
+        android:id="@+id/budgetValue"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/enter_budget"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/budgetButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/budgetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:onClick="saveBudget"
+        android:text="@string/button_save"
+        app:layout_constraintBaseline_toBaselineOf="@+id/budgetValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/budgetValue"
+        tools:onClick="saveBudget" />
+
+    <TextView
+        android:id="@+id/budgetLabel"
+        android:layout_width="83dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/budget"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/budgetValue" />
+
+    <TextView
+        android:id="@+id/startBudget"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/budgetLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/budgetLabel" />
+
+    <TextView
+        android:id="@+id/remainingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/remaining_budget"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/budgetLabel" />
+
+    <TextView
+        android:id="@+id/remainingBudget"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/remainingLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/remainingLabel" />
+
+    <TextView
+        android:id="@+id/usedLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/used_budget"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/remainingLabel" />
+
+    <TextView
+        android:id="@+id/usedBudget"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/usedLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/usedLabel" />
+
+    <EditText
+        android:id="@+id/itemPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/item_price"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/priceButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usedLabel" />
+
+    <Button
+        android:id="@+id/priceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:onClick="subtractPrice"
+        android:text="@string/price_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/itemPrice"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

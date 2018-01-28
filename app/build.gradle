@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.example.rod.shoppy"
+        applicationId "com.example.rod.com.rod.shoppy"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1

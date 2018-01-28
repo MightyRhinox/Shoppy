@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Shoppy</string>
+    <string name="enter_budget">Enter Budget</string>
+    <string name="budget">Budget</string>
+    <string name="button_save">SAVE</string>
+    <string name="remaining_budget">Remaining</string>
+    <string name="used_budget">Used</string>
+    <string name="item_price">Enter Price</string>
+    <string name="price_button">SAVE</string>
 </resources>
